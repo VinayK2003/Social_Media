@@ -11,6 +11,11 @@ import BgImageII from "./Components/BgImageII";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SignUp from "./Components/SignUp";
 import HomePage from "./Components/HomePage";
+import Generate from "./GenerateContent/Generate";
+import GetOptSales from "./GetOptSales/GetOptSales";
+import GetTargetAudi from "./GetTargetAudi/GetTargetAudi";
+import BestTime from "./BestTime/BestTime";
+import TrackPerfom from "./TrackPerform/TrackPerfom";
 
 function App() {
   return (
@@ -37,6 +42,11 @@ function App() {
             }
           />
          <Route path="/homepage" element={<HomePage/>} />
+         <Route path="/generatecontent" element={<Generate/>} />
+         <Route path="/getoptsales" element={<GetOptSales/>} />
+         <Route path="/gettargetaudi" element={<GetTargetAudi/>} />
+         <Route path="/trackperformance" element={<TrackPerfom/>} />
+         <Route path="/besttime" element={<BestTime/>} />
         </Routes>
       </BrowserRouter>
     </div>
