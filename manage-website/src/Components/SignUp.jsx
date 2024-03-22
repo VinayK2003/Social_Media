@@ -97,6 +97,12 @@ const SignUp = () => {
                     >
                         Sign in
                     </Button>
+                    <Typography align="center">
+                    Already have an account?&nbsp;
+                    <Link href="/login" >
+                        Sign In
+                    </Link>
+                </Typography>
                 </form>
             </Paper>
         </Grid>

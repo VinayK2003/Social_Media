@@ -37,7 +37,13 @@ const Login = () => {
             });
 
             if (!response.ok) {
-                throw new Error('Invalid credentials');
+                if (response.status === 400) {
+                    document.getElementById("registernowtext").style.display="block";
+                    throw new Error("Register Now!");
+
+                } else {
+                    throw new Error('Failed to log in');
+                }
             }
 
             // Redirect user or perform any other action upon successful login
@@ -100,6 +106,11 @@ const Login = () => {
                     <Link href="/signup" >
                         Sign Up
                     </Link>
+                </Typography>
+                <Typography id="registernowtext" align="center" style={{ display: 'none', color:"red" }}>
+                    Account Doesn't Exists :( 
+                        <br></br>
+                    Sign Up Now!
                 </Typography>
             </Paper>
         </Grid>

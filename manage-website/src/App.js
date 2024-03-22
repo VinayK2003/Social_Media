@@ -16,7 +16,11 @@ import GetOptSales from "./GetOptSales/GetOptSales";
 import GetTargetAudi from "./GetTargetAudi/GetTargetAudi";
 import BestTime from "./BestTime/BestTime";
 import TrackPerfom from "./TrackPerform/TrackPerfom";
-
+import Charts from "./Components/Charts";
+import Charts2 from "./Components/Charts2";
+import Charts2_1 from "./Components/Charts2_1";
+import Charts2_2 from "./Components/Charts2_2";
+import Charts2_3 from "./Components/Charts2_3";
 function App() {
   return (
     <div className="App">
@@ -43,11 +47,12 @@ function App() {
           />
          <Route path="/homepage" element={<HomePage/>} />
          <Route path="/generatecontent" element={<Generate/>} />
-         <Route path="/getoptsales" element={<GetOptSales/>} />
+         <Route path="/getoptsales" element={<><GetOptSales/><Charts/></>} />
          <Route path="/gettargetaudi" element={<GetTargetAudi/>} />
          <Route path="/trackperformance" element={<TrackPerfom/>} />
          <Route path="/besttime" element={<BestTime/>} />
-        </Routes>
+         <Route path="/charts2_1" element={<><Charts2_1/><Charts2_2/><Charts2_3/></>} />
+        </Routes> 
       </BrowserRouter>
     </div>
   );

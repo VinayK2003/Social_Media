@@ -6,17 +6,25 @@ import './Card.css'; // Import CSS file for styling
 const Card = ({cardname,link,image}) => {
     const navigate=useNavigate();
   return (
-    <div className="card">
-        <img  src={image} alt="Lago di Braies" style={{ width: '40%' }}></img>
+    <div className="card" style={{
+      height:"20rem",
+      display:"flex",
+      flexDirection:"column",
+      textAlign:"center",
+      justifyContent:"center",
+    }}>
+        <img  src={image} alt="Lago di Braies" style={{ 
+          height:"14rem",
+          padding:"15px",
+          borderRadius:"40px"
+        }}></img>
 
 
         <div className="card__details">
 
 
-            
-            <div className="name">{cardname}</div>
 
-          <Link to={link} ><button type="submit" >Submit</button></Link>  
+          <Link to={link} ><button type="submit" style={{color:"black",border: "none",width:"20rem", height:"3rem",borderRadius:"5px"}} >{cardname}</button></Link>  
         </div>
 
 
