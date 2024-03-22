@@ -10,6 +10,7 @@ import BgImage from "./Components/BgImage";
 import BgImageII from "./Components/BgImageII";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SignUp from "./Components/SignUp";
+import HomePage from "./Components/HomePage";
 
 function App() {
   return (
@@ -35,8 +36,7 @@ function App() {
               </>
             }
           />
-          {/* Route for the login page */}
-
+         <Route path="/homepage" element={<HomePage/>} />
         </Routes>
       </BrowserRouter>
     </div>

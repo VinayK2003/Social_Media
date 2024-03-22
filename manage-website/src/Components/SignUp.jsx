@@ -2,8 +2,10 @@ import React, {useState} from 'react';
 import { Grid, Paper, Avatar, TextField, Button, Typography, Link } from '@material-ui/core';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
+    const navigate=useNavigate();
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -26,7 +28,7 @@ const SignUp = () => {
         e.preventDefault();
         
         try {
-            const response = await fetch('http://localhost:3000/login', {
+            const response = await fetch('http://localhost:5000/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -40,6 +42,7 @@ const SignUp = () => {
 
             // Redirect user or perform any other action upon successful login
             console.log('SignUp successful');
+            navigate("/homepage")
         } catch (error) {
             console.error('Error:', error.message);
         }
